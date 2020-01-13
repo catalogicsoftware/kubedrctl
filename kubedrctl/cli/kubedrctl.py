@@ -37,7 +37,7 @@ class MyCLI(click.MultiCommand):
         return mod.cli
 
 @click.command(cls=MyCLI)
-@click.version_option('0.42')
+@click.version_option('0.1.0')
 @context.pass_context
 def cli(ctx):
     """KubeDR CLI.
@@ -57,7 +57,7 @@ def init_logging():
     ch = logging.StreamHandler()
     ch.setLevel(logging.CRITICAL)
     ch.setFormatter(logging.Formatter(''))
-    logger.addHandler(ch)    
+    logger.addHandler(ch)
 
     return logfile
 
@@ -72,5 +72,5 @@ def main():
 
         exctype, value = sys.exc_info()[:2]
         click.secho(traceback.format_exception_only(exctype, value)[0], fg='red')
-        
+
         sys.exit(1)
