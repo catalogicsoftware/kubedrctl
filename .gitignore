@@ -2,5 +2,6 @@ build/*
 dist/*
 *.vscode/
 *.egg-info/
+*.eggs/
 *.pyc
 *.html
