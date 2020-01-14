@@ -1,5 +1,5 @@
-build/*
-dist/*
+build/
+dist/
 *.vscode/
 *.egg-info/
 *.eggs/
