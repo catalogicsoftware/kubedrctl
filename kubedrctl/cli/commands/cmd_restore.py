@@ -25,7 +25,7 @@ def cli(ctx, accesskey, secretkey, repopwd, endpoint, bucket, targetdir, snapid)
 
     """
 
-    if not accesskey or not secretkey or not repopwd or not endpoint or not bucket and not targetdir:
+    if not accesskey or not secretkey or not repopwd or not endpoint or not bucket or not targetdir:
         raise Exception('One of the required parameters (accesskey, secretkey, repopwd, endpoint, bucket, targetdir) is missing. ')
 
     params = {
