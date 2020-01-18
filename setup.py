@@ -3,6 +3,9 @@
 
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
+
+from distutils.version import LooseVersion
+
 # To use a consistent encoding
 from codecs import open
 from os import path
@@ -13,13 +16,17 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
+# Get package version from the .version file
+with open(path.join(here, '.version')) as f:
+    version = f.read().strip()
+
 setup(
     name='kubedrctl',
 
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.1.3',
+    version=version,
 
     description="KubeDR CLI.",
     long_description=long_description,

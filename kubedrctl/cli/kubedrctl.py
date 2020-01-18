@@ -37,7 +37,7 @@ class MyCLI(click.MultiCommand):
         return mod.cli
 
 @click.command(cls=MyCLI)
-@click.version_option('0.1.3')
+@click.version_option()
 @context.pass_context
 def cli(ctx):
     """KubeDR CLI.
